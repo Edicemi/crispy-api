@@ -24,7 +24,7 @@ const Register = async(req, res) => {
                 email: email,
                 password: hashedPassword,
                 mobile: mobile,
-                confirmpassword: hashedPassword,
+                // confirmpassword: hashedPassword,
             })
             await user.save()
             ejs.renderFile(

@@ -17,10 +17,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    confirmpassword: {
-        type: String,
-        required: true,
-    },
     Books: [{
         type: Schema.Types.ObjectId,
         required: true,

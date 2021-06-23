@@ -13,7 +13,7 @@ router.post('/register', Register);
 router.post('/login', Login);
 
 //users choice
-router.get('/fetchUser', validateUserToken, fetchUsers);
+router.get('/fetchUser/:id', validateUserToken, fetchUsers);
 
 
 module.exports = router;
