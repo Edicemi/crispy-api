@@ -36,6 +36,7 @@ const Register = async(req, res) => {
                     await sendMail(data, 'Registration Successful', email)
 
                     let payload = {
+                        user_id: user._id,
                         fullname: user.fullname,
                         email: user.email,
                         mobile: user.mobile,

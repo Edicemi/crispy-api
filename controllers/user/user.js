@@ -14,7 +14,7 @@ const fetchUsers = async(req, res) => {
             throw error;
 
         }
-        const user = await User.findById(req.decoded.user_id).lean().populate("Books");
+        const user = await User.findById(req.decoded.user_id).populate("books");
 
         if (!user) {
             const error = Error("User not found", 404);
