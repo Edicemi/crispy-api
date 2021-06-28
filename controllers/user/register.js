@@ -1,6 +1,6 @@
-const path = require('path'),
-    ejs = require('ejs'),
-    User = require('../../models/user.model')
+const path = require('path');
+const ejs = require('ejs');
+const User = require('../../models/user.model')
 
 const Error = require('../../lib/error')
 const { sendMail } = require('../../lib/email')

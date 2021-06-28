@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 logger = require('morgan');
 const app = express();
-
 const userRouter = require('./routes/v1/users');
 const bookRouter = require('./routes/v1/books')
 
@@ -17,11 +16,10 @@ app.use('/v1/users', userRouter);
 app.use('/v1/books', bookRouter);
 
 
-
 //server
 app.listen(process.env.PORT, _ => {
     console.log(`Server running on PORT ${process.env.PORT}`);
-})
+});
 if (err => {
         console.log(`Error connecting to MongoDB: ${err}`);
     });
