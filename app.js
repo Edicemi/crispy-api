@@ -15,6 +15,10 @@ app.use(express.json());
 app.use('/v1/users', userRouter);
 app.use('/v1/books', bookRouter);
 
+// home route
+app.get('/', (req, res) => {
+    res.render('home');
+});
 
 //server
 app.listen(process.env.PORT, _ => {
