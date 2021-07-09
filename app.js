@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 app.use('/v1/users', userRouter);
 app.use('/v1/books', bookRouter);
 
-// home route
+//home route
 app.get('/', (req, res) => {
     console.log('Request Sent')
     res.render('home');

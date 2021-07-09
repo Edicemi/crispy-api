@@ -12,6 +12,22 @@ const { validateUserToken } = require('../../lib/jwt')
 router.post('/register', Register);
 router.post('/login', Login);
 
+//login
+router.get('/login', (req, res) => {
+    res.render('login');
+});
+
+//logout
+router.get('/logout', (req, res) => {
+    res.send('Log Out')
+})
+
+//google
+router.get('/google', (req, res) => {
+    //passport
+    res.send('Google login')
+})
+
 //users choice
 router.get('/fetchUser/:id', validateUserToken, fetchUsers);
 
