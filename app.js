@@ -22,7 +22,8 @@ app.use('/v1/books', bookRouter);
 // home route
 app.get('/', (req, res) => {
     console.log('Request Sent')
-    res.send(`Welcome to Blog running on port ${ process.env.PORT }`)
+    res.render('home');
+    // res.send(`Welcome to Blog running on port ${ process.env.PORT }`)
 });
 
 //server
