@@ -21,12 +21,8 @@ const userSchema = new mongoose.Schema({
         type: Schema.Types.ObjectId,
         required: true,
         ref: "Books",
-    } ],
+    }],
 
-    date:{
-        type: String,
-        enum:[mo, tues, we, the, fir, sat]
-    }
 }, { timestamps: true });
 
 module.exports = mongoose.model('Users', userSchema);
