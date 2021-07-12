@@ -5,7 +5,8 @@ const helmet = require('helmet');
 logger = require('morgan');
 const app = express();
 const userRouter = require('./routes/v1/users');
-const bookRouter = require('./routes/v1/books')
+const bookRouter = require('./routes/v1/books');
+const passportSetup = require('./services/passport');
 
 //middleware
 app.use(logger('dev'));

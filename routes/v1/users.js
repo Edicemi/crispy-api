@@ -4,6 +4,7 @@ const Register = require('../../controllers/user/register');
 const Login = require('../../controllers/user/login');
 const fetchUsers = require('../../controllers/user/user')
 const { validateUserToken } = require('../../lib/jwt')
+const passport = require("passport");
 
 
 
@@ -22,10 +23,9 @@ router.get('/logout', (req, res) => {
 })
 
 //google
-router.get('/google', (req, res) => {
-    //passport
-    res.send('Google login')
-})
+router.get('/google', passport.authenticate("google", {
+    scope: ['profile']
+}));
 
 //users choice
 router.get('/fetchUser/:id', validateUserToken, fetchUsers);
