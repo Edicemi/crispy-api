@@ -7,21 +7,14 @@ const app = express();
 const userRouter = require('./routes/v1/users');
 const bookRouter = require('./routes/v1/books');
 const passportSetup = require('./services/passport');
-const cookieSession = require('cookie-session');
-const passport = require('passport');
+
 
 
 //middleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(helmet());
-app.use(cookieSession({
-    maxAge: 24 * 60 * 60 * 1000,
-    keys: [process.env.keys]
-}));
-//initialize passport
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 // set view engine
 app.set('view engine', 'ejs');

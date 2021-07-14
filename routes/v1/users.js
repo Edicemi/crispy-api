@@ -27,9 +27,9 @@ router.get('/google', passport.authenticate("google", {
     scope: ['profile']
 }));
 
-//callack route
+//callback route
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-    res.send('You have reched the callback URl')
+    res.send("bvhjvbjhvjhvhgcvhgcv");
 });
 
 
