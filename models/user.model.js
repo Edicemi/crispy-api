@@ -9,14 +9,17 @@ const userSchema = new mongoose.Schema({
         type: String,
         reqired: true,
     },
-    mobile: {
+    // mobile: {
+    //     type: String,
+    //     required: true,
+    // },
+    googleId: {
         type: String,
-        required: true,
     },
-    password: {
-        type: String,
-        required: true,
-    },
+    // password: {
+    //     type: String,
+    //     required: true,
+    // },
     books: [{
         type: Schema.Types.ObjectId,
         required: true,
