@@ -29,7 +29,8 @@ router.get('/google', passport.authenticate("google", {
 
 //callback route
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-    res.send("bvhjvbjhvjhvhgcvhgcv");
+    // res.send(req.user);
+    res.redirect('/profile/');
 });
 
 
