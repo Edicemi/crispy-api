@@ -7,7 +7,7 @@ require('dotenv').config();
 //cookiess
 //grabbing information from the user
 passport.serializeUser((user, done) => {
-  done(null, user.id);
+    done(null, user.id);
 });
 //finding user based on id
 passport.deserializeUser((id, done) => {
@@ -33,7 +33,8 @@ passport.use(
                 //create new user
                 new User({
                     fullname: profile.displayName,
-                    googleId: profile.id
+                    googleId: profile.id,
+                    thumbnail: profile._json.image.url
                 }).save().then((newUser) => {
                     console.log('New user created:' + newUser);
                     done(null, newUser);
