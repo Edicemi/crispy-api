@@ -57,9 +57,15 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/v1/users/logout">Logout</a></li>
-            <li><a href="/v1/users/login">Login</a></li>
-            <li><a href="/">Homepage</a></li>
+            <% if (user) { %>
+                <li><a href="/v1/users/logout">Log out</a></li>
+                <% } else { %>
+                    <li><a href="/v1/users/login">Login</a></li>
+                    <% } %>
+                        <li><a href="/">Homepage</a></li>
+                        <li>
+                            <a href="/profile">Profile</a>
+                        </li>
         </ul>
     </nav>
     <header>
