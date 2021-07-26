@@ -7,7 +7,7 @@ require('dotenv').config();
 //cookiess
 //grabbing information from the user
 passport.serializeUser((user, done) => {
-    done(null, user.id);
+  done(null, user.id);
 });
 //finding user based on id
 passport.deserializeUser((id, done) => {
