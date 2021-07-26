@@ -36,7 +36,7 @@ app.use('/profile', profileRoute);
 //home route
 app.get('/', (req, res) => {
     console.log('Request Sent')
-    res.render('home');
+    res.render('home', { user: req.user });
     // res.send(`Welcome to Blog running on port ${ process.env.PORT }`)
 });
 

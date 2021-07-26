@@ -49,23 +49,19 @@
 <body>
     <nav>
         <ul>
-            <% if (user) { %>
-                <li><a href="/v1/users/logout">Log out</a></li>
-                <% } else { %>
-                    <li><a href="/v1/users/login">Login</a></li>
-                    <% } %>
-                        <li><a href="/">Homepage</a></li>
-                        <li>
-                            <a href="/profile">Profile</a>
-                        </li>
+            <li><a href="/v1/users/logout">Logout</a></li>
+            <li><a href="/v1/users/login">Login</a></li>
+            <li><a href="/">Homepage</a></li>
         </ul>
     </nav>
     <header>
-        <h1>Welcome to Edicemi Book Blog!</h1>
-        <h2>Homepage</h2>
+        <h1>Welcome to your profile,
+            <%=user.fullname%>
+        </h1>
+
     </header>
     <main>
-        <p>Probably the best blog on the planet :)</p>
+        <p></p>
     </main>
 </body>
 
